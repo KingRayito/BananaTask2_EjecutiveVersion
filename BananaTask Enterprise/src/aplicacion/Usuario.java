@@ -7,6 +7,7 @@ public class Usuario {
 	private String nombres;
 	private String apellidos;
 	private String ocupacion;
+	private boolean administrador; 
 	private LinkedList <Proyecto> proyectosUsuario;
 	
 	public String getNombreUsuario() {
@@ -45,5 +46,13 @@ public class Usuario {
 	public void setProyectosUsuario(LinkedList<Proyecto> proyectosUsuario) {
 		this.proyectosUsuario = proyectosUsuario;
 	}
+	public boolean isAdministrador() {
+		return administrador;
+	}
+	public void setAdministrador(boolean administrador) {
+		this.administrador = administrador;
+	}
+	
+	
 
 }

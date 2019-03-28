@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
-<?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
-	<!-- TODO Add Nodes -->
-</BorderPane>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Inicio">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Agregar proyecto..." />
+              <MenuItem mnemonicParsing="false" text="Cerrar sesión" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="69.0" layoutY="147.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView layoutX="-12.0" layoutY="17.0" prefHeight="356.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="17.0" />
+                  <Text layoutX="40.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de proyectos" underline="true" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="39.806640625" AnchorPane.rightAnchor="39.193359375" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Text layoutX="146.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panel de Administrador" underline="true" AnchorPane.bottomAnchor="350.98828125" AnchorPane.leftAnchor="145.166015625" AnchorPane.rightAnchor="146.833984375" AnchorPane.topAnchor="6.05078125" />
+                  <Text layoutX="279.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Integrantes" />
+                  <Text layoutX="93.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fase" AnchorPane.bottomAnchor="286.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="300.66796875" AnchorPane.topAnchor="70.0" />
+                  <Button layoutX="63.0" layoutY="103.0" mnemonicParsing="false" text="Agregar fase" />
+                  <Button layoutX="69.0" layoutY="150.0" mnemonicParsing="false" text="Editar fase" />
+                  <Button layoutX="63.0" layoutY="248.0" mnemonicParsing="false" text="Eliminar fase" />
+                  <Button layoutX="248.0" layoutY="103.0" mnemonicParsing="false" text="Agregar integrantes" />
+                  <Button layoutX="254.0" layoutY="150.0" mnemonicParsing="false" text="Editar integrantes" />
+                  <Button layoutX="251.0" layoutY="248.0" mnemonicParsing="false" text="Eliminar integrante" />
+                  <TextField layoutX="30.0" layoutY="208.0" />
+                  <TextField layoutX="235.0" layoutY="208.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

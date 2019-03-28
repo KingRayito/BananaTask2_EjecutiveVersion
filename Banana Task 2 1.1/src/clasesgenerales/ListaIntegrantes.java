@@ -6,7 +6,7 @@ import clasesbasicas.Integrante;
 public class ListaIntegrantes {
 	private HashMap<String,Integrante> mapaIntegrantes;
 	
-	public boolean agregarIntegrante(Integrante integrante) {
+	public boolean agregarIntegrante(Integrante integrante) { //!
 		if (mapaIntegrantes.isEmpty())
 			mapaIntegrantes.put(integrante.getIdentificador(), integrante);
 		else {

@@ -13,10 +13,11 @@ public class BananaTask2 {
 		System.out.println("Iniciando aplicacion...");
 		BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
 		String key, buffer;
-		int op1 = 5;
-		Integrante integrante = new Integrante("admin", "1234", "Nombre", "Admin", true);
+		int op1 = 4;
 		ListaIntegrantes integrantes = new ListaIntegrantes();
-		integrantes.agregarIntegrante(integrante);
+		integrantes.agregarIntegrante(new Integrante("Bastian", "1905", true));
+		integrantes.agregarIntegrante(new Integrante("Tifa", "1704", true));
+		integrantes.agregarIntegrante(new Integrante("Felipe", "2904", true));
 		do {
 			System.out.println("Bienvenido a BananaTask Enterprise. Por favor inicie sesión para continuar.");
 			do {
@@ -47,11 +48,10 @@ public class BananaTask2 {
 			if(integrantes.getMapaIntegrantes().get(key).isAdmin()) {
 				do {
 		
-					System.out.println("1.- Ingresar proyecto.");
-					System.out.println("2.- Mostrar proyectos.");
-					System.out.println("3-. Ingresar usuario");
-					System.out.println("4-. Cerrar sesion");
-					System.out.println("5-. Salir del programa.");
+					System.out.println("1.- Proyectos.");
+					System.out.println("2.- Integrantes.");
+					System.out.println("3-. Cerrar sesion");
+					System.out.println("4-. Salir del programa.");
 					op1 = Integer.parseInt(lector.readLine());
 		
 			        switch (op1){
@@ -63,14 +63,8 @@ public class BananaTask2 {
 			            	break;
 			            
 			            case 2: 
-			            	
-			            	
-			            	
-			            	break;
-			            	
-			            case 3:
-			            	
-			            	integrante = new Integrante();
+			         
+			            	Integrante integrante = new Integrante();
 			            	System.out.println("Ingrese nombre de usuario: ");
 			            	key = lector.readLine();
 			            	integrante.setIdentificador(key);
@@ -89,22 +83,25 @@ public class BananaTask2 {
 			            	
 			            	break;
 			            	
-			            case 4: 
+			            case 3:
+			            	
 			            	System.out.println("Cerrando sesion...");
-			            	break; 
-			            
-			            case 5: break;
+			            	break;
+			            	
+			            case 4: 
+			            	
+			            	break;
 			            
 			            default: break;
 	
 			        }   
 		
-				} while(op1 < 4);  
+				} while(op1 < 3);  
 				
 			}
 			else {
 				System.out.println("1-. Cerrar sesion");
-				System.out.println("5-. Salir");
+				System.out.println("4-. Salir");
 				op1 = Integer.parseInt(lector.readLine());
 				switch(op1){
 					
@@ -112,7 +109,7 @@ public class BananaTask2 {
 						System.out.println("Cerrando sesion...");
 						break;
 						
-					case 5: 
+					case 4: 
 						break;
 					
 					default: 
@@ -120,6 +117,6 @@ public class BananaTask2 {
 					
 				}
 			}
-		} while(op1 != 5);
+		} while(op1 != 4);
 	}
 }

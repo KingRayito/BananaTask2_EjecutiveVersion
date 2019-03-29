@@ -42,16 +42,6 @@ public class ListaIntegrantes {
 		return true;
 	}
 	
-	public void mostrarMapaIntegrantes(){
-		int i = 1;
-		for (String k : mapaIntegrantes.keySet()) {
-			System.out.println("Integrante " + i + ":");
-			System.out.println("	" + mapaIntegrantes.get(k).getNombre());
-			System.out.println("	" + mapaIntegrantes.get(k).getOcupacion());
-			i++;
-		}
-	}
-	
 	public boolean inicioSesion(String identificador, String contraseña){
 		for (String k : mapaIntegrantes.keySet()) 
 			if (k.compareTo(identificador) == 0) 

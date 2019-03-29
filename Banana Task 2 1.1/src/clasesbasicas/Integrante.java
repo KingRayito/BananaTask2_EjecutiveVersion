@@ -13,12 +13,6 @@ public class Integrante {
 	public Integrante() {
 	}
 	
-	public Integrante(String identificador, String contraseña, boolean admin) {
-		this.identificador = identificador;
-		this.contraseña = contraseña;
-		this.admin = admin;
-	}
-	
 	public Integrante(String identificador, String contraseña, String nombre, String ocupacion, boolean admin) {
 		this.identificador = identificador;
 		this.contraseña = contraseña;

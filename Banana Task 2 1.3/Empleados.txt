@@ -1,0 +1,54 @@
+felipe
+2904
+Felipe A
+Estudiante de Informatica
+true
+true
+kevin
+1234
+Kevin A
+Estudiante de Informatica
+true
+true
+jorge
+8543
+Jorge albino
+Ingeniero civil
+true
+true
+esteban
+1220
+Estaban A
+Ingeniero civil
+true
+true
+tifa
+1704
+Stephanie G
+Estudiante de Informatica
+true
+true
+mica
+2558
+Mica Leigh
+Ingeniera civil
+true
+true
+Sin encargado
+Sin encargado
+Sin encargado
+Sin encargado
+true
+true
+basti
+1905
+Bastian R
+Estudiante de Informatica
+true
+false
+claudio
+6592
+Claudio M
+Dibujante
+true
+true

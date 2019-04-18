@@ -1,0 +1,67 @@
+Pavimentacion de avenida
+Constructora alamos
+false
+felipe
+esteban
+basti
+;
+Topografia
+Hacer la topografia del lugar
+false
+basti
+Cotizar materiales
+Consultar los precios de los distintos materiales para la obra
+false
+esteban
+Pavimentar
+Accion de echar cemento
+false
+felipe
+;
+Comprar comida
+Tio del kiosko
+false
+tifa
+;
+Sacar dinero
+Buscar monedas en billetera
+false
+tifa
+Entregar dinero
+Estirar la mano y darle el dinero al vendedor
+false
+tifa
+;
+Alcantarillado de departamentos alerce
+Constructora el alerce
+false
+jorge
+kevin
+mica
+claudio
+;
+Trabajo de terreno
+Se debe ir al terreno para ver los detalles de este
+false
+mica
+Planos de la excavacion
+Dibujar los planos de la excavacion
+false
+claudio
+Modelado del alcantarillado
+Modelar las alcantarillas
+false
+kevin
+Calculos de flujo
+Calculos del flujo del agua
+false
+jorge
+Inicio obras
+Inicio del proceso de construccion
+false
+claudio
+Termino obras
+Fin del proceso de construccion
+false
+claudio
+;

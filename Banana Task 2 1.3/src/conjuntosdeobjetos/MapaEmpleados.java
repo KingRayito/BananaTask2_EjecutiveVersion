@@ -10,11 +10,32 @@ public class MapaEmpleados {
 	private HashMap<String, Empleado> mapaEmpleados;
 	
 	
-	public int cantidadDeEmpeladosTotal()
+	public int cantidadDeEmpleadosTotal()
 	{
 		return mapaEmpleados.size() - 1;
 	}
 	
+	
+	public int cantidadDeEmpleadosDesocupados()
+	{
+		int contadorDeEmpleados = 0;
+		for(Empleado empleado : mapaEmpleados.values())
+			if(!empleado.isTrabajando())
+				contadorDeEmpleados++;
+		System.out.println(contadorDeEmpleados);
+		return contadorDeEmpleados;
+	}
+	
+	
+	public int cantidadDeEmpleadosOcupados()
+	{
+		int contadorDeEmpleados = 0;
+		for(Empleado empleado : mapaEmpleados.values())
+			if(empleado.isTrabajando())
+				contadorDeEmpleados++;
+		System.out.println(contadorDeEmpleados);
+		return contadorDeEmpleados;
+	}
 	
 	
 	/* Recibe datos de un empleado y lo agrega al sistema.

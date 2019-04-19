@@ -3,7 +3,7 @@ felipe
 Felipe A
 Estudiante de Informatica
 true
-true
+false
 kevin
 1234
 Kevin A
@@ -45,7 +45,7 @@ basti
 Bastian R
 Estudiante de Informatica
 true
-false
+true
 claudio
 6592
 Claudio M

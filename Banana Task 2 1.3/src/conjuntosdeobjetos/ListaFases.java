@@ -122,12 +122,13 @@ public class ListaFases {
 		{
 			if(f.getNombre().compareTo(nombreAEditar) == 0) 
 			{
+				int posicionFase = listaFases.indexOf(f);
 				listaFases.remove(f);
 				f.setNombre(nombre);
 				f.setDescripcion(descripcion);
 				f.setCompletado(completado);
 				f.setEncargado(encargado);
-				listaFases.add(f);
+				listaFases.add(posicionFase, f);
 				return true;
 			}
 		}

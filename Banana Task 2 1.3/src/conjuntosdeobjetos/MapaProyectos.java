@@ -11,6 +11,13 @@ public class MapaProyectos {
 	private HashMap<String, Proyecto> mapaProyectos;
 	
 	
+	public double porcentajeAvanceDeFase()
+	{
+		for(Proyecto p : mapaProyectos.values()) 
+			p.
+	}
+	
+	
 	/* Recibe datos de un proyecto y lo agrega al sistema.
 	 * En caso de que el proyecto ya se encuentre en el 
 	 * sistema se retornara falso.*/
@@ -267,6 +274,13 @@ public class MapaProyectos {
 			return false;
 	}
 	
+	
+	
+	public void obtenerIdentificadorDeIntegrantes(LinkedList<String> identificadorIntegrantes, String nombreProyecto)
+	{
+		if(mapaProyectos.containsKey(nombreProyecto))
+			mapaProyectos.get(nombreProyecto).obtenerIdentificadorDeIntegrantes(identificadorIntegrantes);
+	}
 	
 	
 	/* Recibe el escritor del archivo con el cual guarda 

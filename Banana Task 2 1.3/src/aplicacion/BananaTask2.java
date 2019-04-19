@@ -11,10 +11,10 @@ public class BananaTask2 {
 		identificadorIntegrantes.add("basti");
 		
 		empresa.cargarArchivo();
-		empresa.mostrarArchivo();
-		empresa.editarIntegrantesDeProyecto(identificadorIntegrantes, "Pavimentacion de avenida");
+		//empresa.mostrarArchivo();
+		
 		empresa.escribirArchivo();
-		empresa.mostrarArchivo();
+		//empresa.mostrarArchivo();
 	}
 
 }

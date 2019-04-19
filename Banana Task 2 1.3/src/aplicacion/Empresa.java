@@ -11,6 +11,23 @@ public class Empresa {
 	private MapaEmpleados empleados;
 	
 	
+	public double porcentajeDeEmpleadosDesocupados()
+	{
+		return (double)empleados.cantidadDeEmpleadosDesocupados()/(double)empleados.cantidadDeEmpleadosTotal();
+	}
+	
+	public double porcentajeDeEmpleadosOcupados()
+	{
+		return (double)empleados.cantidadDeEmpleadosOcupados()/(double)empleados.cantidadDeEmpleadosTotal();
+	}
+	
+	
+	public double porcentajeAvanceDeFases()
+	{
+		return proyectos.porcentajeAvanceDeFases();
+	}
+	
+	
 	// Agrega un empleado a la empresa.
 	public boolean agregarEmpleados(String identificador, String contraseña, String nombre, String ocupacion, boolean admin, boolean trabajando) 
 	{
@@ -132,9 +149,13 @@ public class Empresa {
 	// Elimina todos los integrantes de un proyecto.
 	public boolean eliminarIntegrantesDeProyecto(String nombreProyecto)
 	{
+		LinkedList<String> integrantesPreviosEnProyecto = new LinkedList<String>();
+		
+		proyectos.obtenerIdentificadorDeIntegrantes(integrantesPreviosEnProyecto, nombreProyecto);
+		
 		if(proyectos.eliminarIntegrantesDeProyecto(nombreProyecto))
 		{
-			empleados.ponerEmpleadosADescansar();
+			empleados.ponerEmpleadosADescansar(integrantesPreviosEnProyecto);
 			return true;
 		}
 		else
@@ -195,20 +216,17 @@ public class Empresa {
 	public boolean editarIntegrantesDeProyecto(LinkedList<String> identificadorIntegrantes, String nombreProyecto)
 	{
 		LinkedList<Empleado> integrantesProyecto = new LinkedList<Empleado>();
+		LinkedList<String> integrantesPreviosEnProyecto = new LinkedList<String>();
 		
 		/* Al editar los integrantes del proyecto, primero se eliminan y 
 		 * luego se vuelven a agregar por si se agregaron o quitaron integrantes.
 		 * Esto a su vez elimina las fases del proyecto en el que estaba.*/
+		
+		proyectos.obtenerIdentificadorDeIntegrantes(integrantesPreviosEnProyecto, nombreProyecto);
+		empleados.ponerEmpleadosADescansar(integrantesPreviosEnProyecto);
+		
 		if(empleados.buscarIntegrantesParaProyecto(integrantesProyecto, identificadorIntegrantes))
-		{
-			if(proyectos.editarIntegrantesDeProyecto(identificadorIntegrantes, integrantesProyecto, nombreProyecto))
-			{
-				empleados.ponerEmpleadosADescansar(identificadorIntegrantes);
-				return true;
-			}
-			else
-				return false;
-		}
+			return proyectos.editarIntegrantesDeProyecto(identificadorIntegrantes, integrantesProyecto, nombreProyecto);
 		else
 			return false;
 	}

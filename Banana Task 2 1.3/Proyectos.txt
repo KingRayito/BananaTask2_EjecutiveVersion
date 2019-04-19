@@ -1,7 +1,6 @@
 Pavimentacion de avenida
 Constructora alamos
 false
-felipe
 esteban
 basti
 ;
@@ -16,7 +15,7 @@ esteban
 Pavimentar
 Accion de echar cemento
 false
-felipe
+basti
 ;
 Comprar comida
 Tio del kiosko
